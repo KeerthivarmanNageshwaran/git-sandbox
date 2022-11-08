@@ -1,0 +1,43 @@
+== VI.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|MakeVIFrontMost
+|image:Drona.lvlib_VI.lvlib_MakeVIFrontMost.vi.png[Drona.lvlib:VI.lvlib:MakeVIFrontMost.vi]
+|+++Makes the front panel of the VI to frontmost, given the VI reference+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|OpenVIFrontPanel
+|image:Drona.lvlib_VI.lvlib_OpenVIFrontPanel.vi.png[Drona.lvlib:VI.lvlib:OpenVIFrontPanel.vi]
+|+++Opens the front panel of the VI by providing the VI reference.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|RunVI
+|image:Drona.lvlib_VI.lvlib_RunVI.vi.png[Drona.lvlib:VI.lvlib:RunVI.vi]
+|+++Runs the VI, given the VI reference.+++
+
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

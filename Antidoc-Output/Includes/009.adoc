@@ -1,0 +1,79 @@
+== KeyboardSimulation.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|KeyDown
+|image:Drona.lvlib_KeyboardSimulation.lvlib_KeyDown.vi.png[Drona.lvlib:KeyboardSimulation.lvlib:KeyDown.vi]
+|+++call keybd_event drom user32.dll library to generate the key down event on desired key+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|KeyPress
+|image:Drona.lvlib_KeyboardSimulation.lvlib_KeyPress.vi.png[Drona.lvlib:KeyboardSimulation.lvlib:KeyPress.vi]
+|+++Press the key down then up+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|KeyUp
+|image:Drona.lvlib_KeyboardSimulation.lvlib_KeyUp.vi.png[Drona.lvlib:KeyboardSimulation.lvlib:KeyUp.vi]
+|+++Call the keybd_event function in user32.dll to generate an event corresponding to the key up action+++
++++for the desired key+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|Type Characters
+|image:Drona.lvlib_KeyboardSimulation.lvlib_Type_Characters.vi.png[Drona.lvlib:KeyboardSimulation.lvlib:Type Characters.vi]
+|+++Handle the actions configured in the key array control for each of the configured keys+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|KeyBoardSimulation
+|image:Drona.lvlib_KeyboardSimulation.lvlib_KeyBoardSimulation.vi.png[Drona.lvlib:KeyboardSimulation.lvlib:KeyBoardSimulation.vi]
+|+++Uses simulated Key Presses to type into a String/Numeric control programmatically.  +++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ValueSignalLatchBooleanArray
+|image:Drona.lvlib_KeyboardSimulation.lvlib_ValueSignalLatchBooleanArray.vi.png[Drona.lvlib:KeyboardSimulation.lvlib:ValueSignalLatchBooleanArray.vi]
+|+++Triggers the latch boolean by keyboard simulation.+++
+
++++The path of the control should be given in the successive index of the array+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ValueSignalLatchBooleanString
+|image:Drona.lvlib_KeyboardSimulation.lvlib_ValueSignalLatchBooleanString.vi.png[Drona.lvlib:KeyboardSimulation.lvlib:ValueSignalLatchBooleanString.vi]
+|+++Sets the value of control which is specified. +++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

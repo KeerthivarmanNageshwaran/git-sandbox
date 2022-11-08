@@ -1,0 +1,78 @@
+== GetControlRef.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|SubPanelTypecast
+|image:Drona.lvlib_GetControlRef.lvlib_SubPanelTypecast.vi.png[Drona.lvlib:GetControlRef.lvlib:SubPanelTypecast.vi]
+|+++Gives the reference of controls present inside the inserted VI of the SubPanel+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|TabControlTypecast
+|image:Drona.lvlib_GetControlRef.lvlib_TabControlTypecast.vi.png[Drona.lvlib:GetControlRef.lvlib:TabControlTypecast.vi]
+|+++Gives the reference of controls present inside the tab control+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|TypecastControls
+|image:Drona.lvlib_GetControlRef.lvlib_TypecastControls.vi.png[Drona.lvlib:GetControlRef.lvlib:TypecastControls.vi]
+|+++Typecasts the control to its respective class and gives the reference of the controls inside it.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|GetControlRefFromControlArray
+|image:Drona.lvlib_GetControlRef.lvlib_GetControlRefFromControlArray.vi.png[Drona.lvlib:GetControlRef.lvlib:GetControlRefFromControlArray.vi]
+|+++This VI gives the desired control reference from the array of control references+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|GetControlsRefFromVIRef
+|image:Drona.lvlib_GetControlRef.lvlib_GetControlsRefFromVIRef.vi.png[Drona.lvlib:GetControlRef.lvlib:GetControlsRefFromVIRef.vi]
+|+++<b>Gives the reference of controls in the VI.</b>+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|GetControlRefByArray
+|image:Drona.lvlib_GetControlRef.lvlib_GetControlRefByArray.vi.png[Drona.lvlib:GetControlRef.lvlib:GetControlRefByArray.vi]
+|+++Gives the reference of control which is specified.+++
+
++++The path of the control should be given in the successive index of the array+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|GetControlRefByPath
+|image:Drona.lvlib_GetControlRef.lvlib_GetControlRefByPath.vi.png[Drona.lvlib:GetControlRef.lvlib:GetControlRefByPath.vi]
+|+++Gives the reference of the control which is specified.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

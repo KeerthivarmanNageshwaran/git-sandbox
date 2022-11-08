@@ -1,0 +1,80 @@
+== Drona.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Nested libraries
+[cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
+
+|<<AssertControlDisable.lvlib>>
+|Library
+
+|<<AssertControlValue.lvlib>>
+|Library
+
+|<<GetControlRef.lvlib>>
+|Library
+
+|<<GetControlValue.lvlib>>
+|Library
+
+|<<GetVI.lvlib>>
+|Library
+
+|<<ValueSignal.lvlib>>
+|Library
+
+|<<KeyboardSimulation.lvlib>>
+|Library
+
+|<<VI.lvlib>>
+|Library
+|===
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|ControlPathToArray
+|image:Drona.lvlib_ControlPathToArray.vi.png[Drona.lvlib:ControlPathToArray.vi]
+|+++Converts control path to array+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ErrorControlMissing
+|image:Drona.lvlib_ErrorControlMissing.vi.png[Drona.lvlib:ErrorControlMissing.vi]
+|+++Creates error if the control is not found.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ErrorSubPanelVIMissing
+|image:Drona.lvlib_ErrorSubPanelVIMissing.vi.png[Drona.lvlib:ErrorSubPanelVIMissing.vi]
+|+++Creates error if the VI is not found in the SubPanel+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|GetApp
+|image:Drona.lvlib_GetApp.vi.png[Drona.lvlib:GetApp.vi]
+|+++Gives the reference of the application specified+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

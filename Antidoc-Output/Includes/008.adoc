@@ -1,0 +1,38 @@
+== ValueSignal.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|ValueSignalByPathArray
+|image:Drona.lvlib_ValueSignal.lvlib_ValueSignalByPathArray.vi.png[Drona.lvlib:ValueSignal.lvlib:ValueSignalByPathArray.vi]
+|+++Sets the value of control which is specified.+++
+
++++The path of the control should be given in the successive index of the array+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ValueSignalByPathString
+|image:Drona.lvlib_ValueSignal.lvlib_ValueSignalByPathString.vi.png[Drona.lvlib:ValueSignal.lvlib:ValueSignalByPathString.vi]
+|+++Sets the value of control which is specified. +++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

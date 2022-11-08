@@ -1,0 +1,167 @@
+== ControlProperty.vi
+
+image::ControlProperty.vi.png[]
+
+*Description:*
+No description found (add content in VI description)
+
+=== States relathionship
+
+[graphviz, format="png", align="center"]
+....
+digraph G162715 {
+rankdir=LR;
+edge[dir=none color=blue  arrowhead=none arrowtail=none style=rounded penwidth=1]
+node[color=crimson shape=Msquare]
+" \"Initialize Core Data\" "[color=forestgreen shape=box]
+" \"Macro: Initialize\" "[color=forestgreen shape=box]
+" \"Exit\" "[color=forestgreen shape=box]
+" Timeout "[color=coral shape=diamond]
+" \"OK\": Value Change "[color=coral shape=diamond]
+" Panel Close? "[color=coral shape=diamond]
+" \"Macro: Exit\" "[color=forestgreen shape=box]
+" \"Data: Initialize\" "[color=forestgreen shape=box]
+" \"Data: Cleanup\" "[color=forestgreen shape=box]
+" \"UI: Initialize\" "[color=forestgreen shape=box]
+" \"UI: Front Panel State\" "[color=forestgreen shape=box]
+"ControlProperty.vi"[color=darkgray shape=invhouse]
+" \"Disabled\": Value Change "[color=coral shape=diamond]
+" Default "[color=coral shape=box]
+" \"Error Handler\" "[color=coral shape=box]
+" \"UI: Cursor Set\" "[color=coral shape=box]
+" \"New Category: 1\" "[color=coral shape=box]
+" \"New Category: 2\" "[color=coral shape=box]
+" \"Macro: Initialize\" " -> " \"Initialize Core Data\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" Timeout " -> " \"Exit\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" \"OK\": Value Change " -> " \"Exit\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" Panel Close? " -> " \"Exit\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" \"Macro: Exit\" " -> " \"Exit\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" \"Macro: Initialize\" " -> " \"Data: Initialize\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" \"Macro: Exit\" " -> " \"Data: Cleanup\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" \"Macro: Initialize\" " -> " \"UI: Initialize\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" \"Macro: Initialize\" " -> " \"UI: Front Panel State\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" \"Macro: Exit\" " -> " \"UI: Front Panel State\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+"ControlProperty.vi" -> " \"Macro: Initialize\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" Timeout " -> " \"Macro: Exit\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" \"OK\": Value Change " -> " \"Macro: Exit\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+" Panel Close? " -> " \"Macro: Exit\" " [dir=both color=cornflowerblue  arrowhead=normal arrowtail=none style=filled penwidth=1];
+}
+....
+
+=== State machine detailed info
+
+[cols="<.<1d,<.<1d,<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|State Name |State Documentation |State Callers |States Called
+
+4+^|*"", "Event Structure", "Idle"*
+
+| Timeout 
+|
+|
+| "Exit"  +
+ "Macro: Exit" 
+
+| "OK": Value Change 
+|
+|
+| "Exit"  +
+ "Macro: Exit" 
+
+| Panel Close? 
+|
+|
+| "Exit"  +
+ "Macro: Exit" 
+
+| "Disabled": Value Change 
+|
+|
+|
+
+4+^|*Core*
+
+| Default 
+|Do not delete, rename, or modify this frame. (this is used to capture unhandled states and typos)
+|
+|
+
+| "Initialize Core Data" 
+|Do not delete, rename, or modify this frame. (this is used to determine panel behavior on exit)
+| "Macro: Initialize" 
+|
+
+| "Error Handler" 
+|Handle any errors here. You can also output any states to clean-up after errors occur
+|
+|
+
+| "Exit" 
+|Do not put any code in this frame. (No errors that occur here will be handled.)
+| Timeout  +
+ "OK": Value Change  +
+ Panel Close?  +
+ "Macro: Exit" 
+|
+
+4+^|*Data*
+
+| "Data: Initialize" 
+|Initialize the shift-register data, here. (data names are defined by what you wire into the bundle function)
+| "Macro: Initialize" 
+|
+
+| "Data: Cleanup" 
+|Cleanup any data and references, here. (this is called automatically, by the Macro: Exit)
+| "Macro: Exit" 
+|
+
+4+^|*UI*
+
+| "UI: Initialize" 
+|Initialize the User Interface, here. (this is called automatically, by the Macro: Init)
+| "Macro: Initialize" 
+|
+
+| "UI: Cursor Set" 
+|Set and Unset Cursor Busy. (Usage: "UI: Cursor Set >> Busy\|Idle")
+|
+|
+
+| "UI: Front Panel State" 
+|Set Front Panel Open or Closed (Usage: "UI: Front Panel State >> Open\|Close")
+| "Macro: Initialize"  +
+ "Macro: Exit" 
+|
+
+4+^|*Macro*
+
+| "Macro: Initialize" 
+|Initialization Macro (This is called once, when the VI starts)
+|
+| "Initialize Core Data"  +
+ "Data: Initialize"  +
+ "UI: Initialize"  +
+ "UI: Front Panel State" 
+
+| "Macro: Exit" 
+|Exit Macro (This is called once, when the VI exits)
+| Timeout  +
+ "OK": Value Change  +
+ Panel Close? 
+| "Exit"  +
+ "Data: Cleanup"  +
+ "UI: Front Panel State" 
+
+4+^|*New Category*
+
+| "New Category: 1" 
+|Your code here. (You can make a copy of, or modify, this frame)
+|
+|
+
+| "New Category: 2" 
+|Your code here. (You can make a copy of, or modify, this frame)
+|
+|
+|===

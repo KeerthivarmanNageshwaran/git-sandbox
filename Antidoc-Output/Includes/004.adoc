@@ -1,0 +1,117 @@
+== AssertControlValue.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|AlmostEqual
+|image:Drona.lvlib_AssertControlValue.lvlib_AlmostEqual.vi.png[Drona.lvlib:AssertControlValue.lvlib:AlmostEqual.vi]
+|+++Asserts if the numeric values of controls are almost equal.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is almost equal to the input value.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|Equal
+|image:Drona.lvlib_AssertControlValue.lvlib_Equal.vi.png[Drona.lvlib:AssertControlValue.lvlib:Equal.vi]
+|+++Asserts if the values of controls are equal.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is equal to the input value.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|False
+|image:Drona.lvlib_AssertControlValue.lvlib_False.vi.png[Drona.lvlib:AssertControlValue.lvlib:False.vi]
+|+++Asserts if the value of control is false.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is false.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|Greater
+|image:Drona.lvlib_AssertControlValue.lvlib_Greater.vi.png[Drona.lvlib:AssertControlValue.lvlib:Greater.vi]
+|+++Asserts if the value of control is greater than the input value.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is greater than the input value.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|GreaterOrEqual
+|image:Drona.lvlib_AssertControlValue.lvlib_GreaterOrEqual.vi.png[Drona.lvlib:AssertControlValue.lvlib:GreaterOrEqual.vi]
+|+++Asserts if the value of control is greater or equal to the input value.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is greater or equal to the input value.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|Less
+|image:Drona.lvlib_AssertControlValue.lvlib_Less.vi.png[Drona.lvlib:AssertControlValue.lvlib:Less.vi]
+|+++Asserts if the value of control is lesser than the input value.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is lesser than the input value.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|LessOrEqual
+|image:Drona.lvlib_AssertControlValue.lvlib_LessOrEqual.vi.png[Drona.lvlib:AssertControlValue.lvlib:LessOrEqual.vi]
+|+++Asserts if the value of control is lesser or equal to the input value.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is lesser or equal to the input value.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|NotEqual
+|image:Drona.lvlib_AssertControlValue.lvlib_NotEqual.vi.png[Drona.lvlib:AssertControlValue.lvlib:NotEqual.vi]
+|+++Asserts if the values of controls are not equal.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is not equal to the input value.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|True
+|image:Drona.lvlib_AssertControlValue.lvlib_True.vi.png[Drona.lvlib:AssertControlValue.lvlib:True.vi]
+|+++Asserts if the value of control is true.+++
+
++++The input control name is given as a string , incase of path, use delimiters inbetween the path.+++
++++This VI gets the value of the control, untill the value is true.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

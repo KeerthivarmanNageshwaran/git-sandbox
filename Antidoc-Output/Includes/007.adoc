@@ -1,0 +1,34 @@
+== GetVI.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|GetVIByName
+|image:Drona.lvlib_GetVI.lvlib_GetVIByName.vi.png[Drona.lvlib:GetVI.lvlib:GetVIByName.vi]
+|+++Gives the reference of the specified VI in the input.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|GetVIByPath
+|image:Drona.lvlib_GetVI.lvlib_GetVIByPath.vi.png[Drona.lvlib:GetVI.lvlib:GetVIByPath.vi]
+|+++Gives the reference of the specified VI in the input.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

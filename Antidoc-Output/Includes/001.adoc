@@ -1,0 +1,40 @@
+== Car Wash.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Queue Driver
+|image:Car_Wash.lvlib_Queue_Driver.vi.png[Car Wash.lvlib:Queue Driver.vi]
+|+++This VI is used as a queue driver. It stores the queue reference and performs the below functions+++
++++Create Q+++
++++Enqueue 1 elements+++
++++Enqueue N elements+++
++++Enstack 1 elements+++
++++Dequeue+++
++++Flush Q+++
++++Destroy Q+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Car Wash
+|image:Car_Wash.lvlib_Car_Wash.vi.png[Car Wash.lvlib:Car Wash.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
